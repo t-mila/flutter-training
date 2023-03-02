@@ -25,10 +25,10 @@ class WorkoutController {
 }
 
 //view class
-class WorkoutView extends StatelessWidget {
+class WorkoutViews extends StatelessWidget {
   final WorkoutController controller;
 
-  WorkoutView({required this.controller});
+  WorkoutViews({required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class WorkoutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Workout App",
-      home: WorkoutView(controller: controller),
+      home: WorkoutViews(controller: controller),
     );
   }
 }
