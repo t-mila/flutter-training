@@ -17,6 +17,7 @@ class TeaApp extends StatelessWidget {
   }
 }
 
+//model
 class Tea {
   final String name;
   final String origin;
@@ -30,6 +31,8 @@ class Tea {
     required this.imageUrl,
   });
 }
+
+//controller
 
 class TeaController {
   List<Tea> _teas = [
@@ -76,26 +79,22 @@ class TeaView extends StatelessWidget {
       body: ListView.builder(
         itemCount: controller.teas.length,
         itemBuilder: (context, index) {
-          Tea tea = controller.teas[index];
-          return Card(
-            color: Colors.lightBlueAccent,
-            child: ListTile(
-              leading: Image.network(
-                tea.imageUrl,
-                height: 30,
-                width: 30,
-              ),
-              title: Text(tea.name),
-              subtitle: Text(tea.origin),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TeaDetail(tea: tea),
-                  ),
-                );
-              },
+          Tea teass = controller.teas[index];
+          return ListTile(
+            leading: Image.network(
+              teass.imageUrl,
+              height: 80,
             ),
+            title: Text(teass.name),
+            subtitle: Text(teass.origin),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TeaDetail(tea: teass),
+                ),
+              );
+            },
           );
         },
       ),
