@@ -56,20 +56,26 @@ class MyHomePage extends StatelessWidget {
     Container(
       color: Colors.blue,
       child: Center(
-        child: Text(
-          'Page 2',
-          style: TextStyle(fontSize: 40, color: Colors.white),
+        child: FlickerNeonText(
+          text: "Page 2",
+          flickerTimeInMilliSeconds: 600,
+          spreadColor: Colors.blue,
+          blurRadius: 20,
+          textSize: 74,
         ),
       ),
     ),
     Container(
       color: Colors.green,
       child: Center(
-        child: Text(
-          'Page 3',
-          style: TextStyle(fontSize: 40, color: Colors.white),
-        ),
-      ),
+        child: FlickerNeonText(
+        text: "Page 3",
+        flickerTimeInMilliSeconds: 600,
+        spreadColor: Colors.red,
+        blurRadius: 100,
+        textSize: 74,
+    ),
+  ),
     ),
   ];
 
