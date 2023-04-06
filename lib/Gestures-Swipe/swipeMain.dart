@@ -38,20 +38,6 @@ class _SwipeGestureExampleState extends State<SwipeGestureExample>{
       200 + (DateTime.now().millisecondsSinceEpoch % 77),
       1,
     );
-  // void changeColor() {
-  //   setState(() {
-  //     containerColor = _generateRandomColor();
-  //   });
-  // }
-  //
-  // Color _generateRandomColor() {
-  //   Random random = Random();
-  //   return Color.fromRGBO(
-  //     random.nextInt(256),
-  //     random.nextInt(256),
-  //     random.nextInt(256),
-  //     1,
-  //   );
     //update the state with the new color
     setState(() {
       containerColor = randomColor;
